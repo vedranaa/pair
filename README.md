@@ -6,7 +6,8 @@ It requires coordinantion between the sender and receiver, as receiving side (us
 
 The intended usage is when two operators are sitting close by, and can (verbaly) agree when something is to be send/received.
 
-## Establishing connection
+## Use
+### Establishing connection
 
 | | Inviting side   | Joining side  |
 ---|---|---
@@ -14,14 +15,14 @@ The intended usage is when two operators are sitting close by, and can (verbaly)
 | inviting| <code> socket = pair.pair.invite(PORT) </code> |  |
 | joining|  | <code> socket = pair.pair.join(E, PORT) </code> |
 
-## Transfering data
+### Transfering data
 
 | | Sending side   | Receiving side  |
 ---|---|---
 | text |  <code> socket.sendtext('Hello world! ') </code> | <code> txt = socket.recvtext() </code>   |
 | numpy arrays | <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendnp(A) </code> | <code> A = socket.recvnp() <code> |
 
-## Closing
+### Closing
 
 | | Both sides   |
 ---|---
