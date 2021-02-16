@@ -7,10 +7,10 @@ It requires coordinantion between the sender and receiver, as receiving side (us
 The intended usage is when two operators are sitting close by, and can (verbaly) agree when something is to be send/received.
 
 
-| Inviting side   | Joining side  |
-|---|---|
-|  <code> import pair </code> <br/> <code> import numpy as np </code> | <code> import pair </code> <br/> <code> import numpy as np </code>   |
-|---|---|
-|  Invite | -  |
-|  - | Join  |
-|---|---|
+| | Inviting side   | Joining side  |
+|---|---|---|
+| imports |  <code> import pair </code> <br/> <code> import numpy as np </code> | <code> import pair </code> <br/> <code> import numpy as np </code>   |
+|---|---|---|
+| |  Invite | -  |
+| |  - | Join  |
+| |---|---|
