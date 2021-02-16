@@ -9,7 +9,7 @@ The intended usage is when two operators are sitting close by, and can (verbaly)
 
 | Inviting side   | Joining side  |
 |---|---|
-|  <code> import pair </br>import numpy as np</code>  | import  |
+|  <code> import pair<br>import numpy as np</code>  | import  |
 |---|---|
 |  Invite | -  |
 |  - | Join  |
