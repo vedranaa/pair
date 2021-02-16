@@ -1,4 +1,4 @@
-# `pair`: pair your sockets
+# `pair`: pair your sock(et)s!
 
 Extension of the [`socket.socket`](https://docs.python.org/3/library/socket.html) class with functionality usefull for sending data between two computers on the same (wireless) network.
     
