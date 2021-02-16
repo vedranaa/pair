@@ -66,13 +66,13 @@ class pair(socket.socket):
     def recvtext(self):
         return self.recv(self.chunk).decode()
          
-    def sendnp(self, nparray):
+    def sendb(self, nparray):
         k = pickle.dumps(nparray)
         nr = len(k)//self.chunk + int((len(k)%self.chunk)>0)
         self.sendtext(f'{nr:{str(self.header)}d}')
         self.sendall(k)
         
-    def recvnp(self):
+    def recvb(self):
         nr = int(self.recv(self.header).decode())
         k = b''
         for i in range(nr):
