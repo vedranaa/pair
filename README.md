@@ -1,6 +1,6 @@
 # `pair`: pair your sockets
 
-Extension of the `socket.socket` class [https://docs.python.org/3/library/socket.html](link) with functionality usefull for sending data between two computers on the same (wireless) network.
+Extension of the `socket.socket` class [[link]](https://docs.python.org/3/library/socket.html) with functionality usefull for sending data between two computers on the same (wireless) network.
     
 It requires coordinantion between the sender and receiver, as receiving side (using the current implementation) will (once receiving has been called) block execution of whatever is running, and keep on waiting for the data. So you need to be sure that something is in the socket, or on the way.
 
