@@ -16,7 +16,7 @@ When establishing connection we differentiate between the innviting side and the
 | inviting| <code> socket = pair.pair.invite(PORT) </code> |  |
 | joining|  | <code> socket = pair.pair.join(E, PORT) </code> |
 
-### Transfering data
+### Transfering data -- TODO: FIX TRUNCATED PICKLE!
 After the connection has been established, there is no difference betweeen the funcionality for the inviting and the joining side. One side sends, and another side receives. Do not call for receive, unless something has been, or will be send. The funcionality for text works only for text. The functionality for bytes works for whatever (also text), but most importantly for numpy arrays.
 
 | | Sending side   | Receiving side  |
