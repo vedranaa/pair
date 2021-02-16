@@ -9,6 +9,9 @@ The intended usage is when two operators are sitting close by, and can (verbaly)
 
 | Inviting side   | Joining side  |
 |---|---|
+|  `import pair
+import numpy as np` | import  |
+|---|---|
 |  Invite | -  |
 |  - | Join  |
 |---|---|
