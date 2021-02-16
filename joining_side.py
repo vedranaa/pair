@@ -21,11 +21,11 @@ socket.sendtext('Hello world! ')
 txt = socket.recvtext()
 
 #%% STEP 8 (7): RECEIVE NP ARRAY
-A = socket.recvnp() 
+A = socket.recvb() 
 
 #%% STEP 9 (10): SEND NP ARRAY
 B = A[:10,:12]
-socket.sendnp(B)
+socket.sendb(B)
 
 #%% STEP 12 (11): CLOSE
 socket.close()

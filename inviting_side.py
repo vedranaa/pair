@@ -19,10 +19,10 @@ socket.sendtext('And back to you. ')
 
 #%% STEP 7 (8): SEND NP ARRAY
 A = np.arange(1000000).reshape((2500,400))
-socket.sendnp(A)
+socket.sendb(A)
 
 #%% STEP 10 (9): RECEIVE NP ARRAY
-B = socket.recvnp()
+B = socket.recvb()
 
 #%% STEP 11 (12) CLOSE
 socket.close()
