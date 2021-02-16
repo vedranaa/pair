@@ -1,4 +1,4 @@
-# `pair`
+# `pair`: pair your sockets
 
 Extension of the socket.socket class with functionality usefull for sending data between two computers on the same (wireless) network.
     
