@@ -6,9 +6,28 @@ It requires coordinantion between the sender and receiver, as receiving side (us
 
 The intended usage is when two operators are sitting close by, and can (verbaly) agree when something is to be send/received.
 
+## Use
+### Establishing connection
+When establishing connection we differentiate between the innviting side and the joining side. The inviting side chooses a port number (PORT), which needs to be larger than 1024, I normaly use a number between 8000 and 9000. The joining side joins using the PORT number and the E number, which is the last part of the inviters IP HOST address on the network -- this will be printed out when inviting side invites, and should be commuincated to the joinin side. If you test the `pair` on your local machine by communincating between two python sessions running in parallel, chools E=0 to indicate joining on local host. (Extra info: after joining, the communication will be on another, not the initial, port.) 
 
-| Inviting side   | Joining side  |
-|---|---|
-|  Invite | -  |
-|  - | Join  |
-|---|---|
+| | Inviting side   | Joining side  |
+---|---|---
+| imports |  <code> import pair </code> <br/> <code> import numpy as np </code> | <code> import pair </code> <br/> <code> import numpy as np </code>   |
+| inviting| <code> socket = pair.pair.invite(PORT) </code> |  |
+| joining|  | <code> socket = pair.pair.join(E, PORT) </code> |
+
+### Transfering data
+After the connection has been established, there is no difference betweeen the funcionality for the inviting and the joining side. One side sends, and another side receives. Do not call for receive, unless something has been, or will be send. The funcionality for text works only for text. The functionality for bytes works for whatever (also text), but most importantly for numpy arrays.
+
+| | Sending side   | Receiving side  |
+---|---|---
+| text |  <code> socket.sendtext('Hello world! ') </code> | <code> txt = socket.recvtext() </code>   |
+| bytes | <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendb(A) </code> | <code> A = socket.recvb() <code> |
+
+### Closing
+Remember to close your socket and free the port.
+
+| | Both sides   |
+---|---
+| closing |  <code> socket.close() </code> | 
+
