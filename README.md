@@ -12,7 +12,7 @@ When establishing connection we differentiate between the innviting side and the
 
 | | Inviting side   | Joining side  |
 ---|---|---
-| imports |  <code> import pair </code> <br/> <code> import numpy as np </code> | <code> import pair </code> <br/> <code> import numpy as np </code>   |
+| imports |  <code> import pair </code> | <code> import pair </code> |
 | inviting| <code> socket = pair.pair.invite(PORT) </code> |  |
 | joining|  | <code> socket = pair.pair.join(E, PORT) </code> |
 
