@@ -19,11 +19,11 @@ The intended usage is when two operators are sitting close by, and can (verbaly)
 | | Sending side   | Receiving side  |
 ---|---|---
 | text |  <code> socket.sendtext('Hello world! ') </code> | <code> txt = socket.recvtext() </code>   |
-| numpy arrays | <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendnp(A) </code> |  |
+| numpy arrays | <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendnp(A) </code> | <code> A = socket.recvnp() <code> |
 
 ## Closing
 
-| | One side   | Other side  |
----|---|---
-| closing |  <code> socket.close() </code> | <code> socket.close() </code> |
+| | Both sides   |
+---|---
+| closing |  <code> socket.close() </code> | 
 
