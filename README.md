@@ -10,7 +10,7 @@ The intended usage is when two operators are sitting close by, and can (verbaly)
 | | Inviting side   | Joining side  |
 ---|---|---
 | imports |  <code> import pair </code> <br/> <code> import numpy as np </code> | <code> import pair </code> <br/> <code> import numpy as np </code>   |
-|---|---|---|
-| |  Invite | -  |
-| |  - | Join  |
+---|---|---
+| inviting| <code> socket = pair.pair.invite(PORT) </code> |  |
+| joining|  | <code> socket = pair.pair.join(E, PORT) </code> |
 | |---|---|
