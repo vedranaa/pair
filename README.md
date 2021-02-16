@@ -8,6 +8,7 @@ The intended usage is when two operators are sitting close by, and can (verbaly)
 
 ## Use
 ### Establishing connection
+When establishing connection we differentiate between the innviting side and the joining side. The inviting side chooses a port number (PORT), which needs to be larger than 1024, I normaly use a number between 8000 and 9000. The joining side joins using the PORT number and the E number, which is the last part of the inviters IP HOST address on the network -- this will be printed out when inviting side invites, and should be commuincated to the joinin side. If you test the ´pair´ on your local machine by communincating between two python sessions running in parallel, chools E=0 to indicate joining on local host.  
 
 | | Inviting side   | Joining side  |
 ---|---|---
@@ -20,7 +21,7 @@ The intended usage is when two operators are sitting close by, and can (verbaly)
 | | Sending side   | Receiving side  |
 ---|---|---
 | text |  <code> socket.sendtext('Hello world! ') </code> | <code> txt = socket.recvtext() </code>   |
-| numpy arrays | <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendnp(A) </code> | <code> A = socket.recvnp() <code> |
+| numpy arrays | <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendb(A) </code> | <code> A = socket.recvb() <code> |
 
 ### Closing
 
