@@ -13,4 +13,14 @@ The intended usage is when two operators are sitting close by, and can (verbaly)
 ---|---|---
 | inviting| <code> socket = pair.pair.invite(PORT) </code> |  |
 | joining|  | <code> socket = pair.pair.join(E, PORT) </code> |
-| |---|---|
+
+| | Sending side   | Receiving side  |
+---|---|---
+| text |  <code> import pair </code> <br/> <code> import numpy as np </code> | <code> import pair </code> <br/> <code> import numpy as np </code>   |
+---|---|---
+| numpy arrays | <code> socket = pair.pair.invite(PORT) </code> |  |
+
+| | One side   | Other side  |
+---|---|---
+| closing |  <code> socket.close() </code> | <code> socket.close() </code> |
+
