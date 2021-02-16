@@ -22,7 +22,7 @@ After the connection has been established, there is no difference betweeen the f
 | | Sending side   | Receiving side  |
 ---|---|---
 | text |  <code> socket.sendtext('Hello world! ') </code> | <code> txt = socket.recvtext() </code>   |
-| bytes | <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendb(A) </code> | <code> A = socket.recvb() <code> |
+| bytes | <code> import numpy as np </code> <br/> <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendb(A) </code> | <code> A = socket.recvb() <code> |
 
 ### Closing
 Remember to close your socket and free the port.
