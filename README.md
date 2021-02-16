@@ -10,14 +10,12 @@ The intended usage is when two operators are sitting close by, and can (verbaly)
 | | Inviting side   | Joining side  |
 ---|---|---
 | imports |  <code> import pair </code> <br/> <code> import numpy as np </code> | <code> import pair </code> <br/> <code> import numpy as np </code>   |
----|---|---
 | inviting| <code> socket = pair.pair.invite(PORT) </code> |  |
 | joining|  | <code> socket = pair.pair.join(E, PORT) </code> |
 
 | | Sending side   | Receiving side  |
 ---|---|---
-| text |  <code> import pair </code> <br/> <code> import numpy as np </code> | <code> import pair </code> <br/> <code> import numpy as np </code>   |
----|---|---
+| text |  <code> socket.sendtext('Hello world! ') </code> | <code> txt = socket.recvtext() </code>   |
 | numpy arrays | <code> socket = pair.pair.invite(PORT) </code> |  |
 
 | | One side   | Other side  |
