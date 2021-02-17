@@ -18,7 +18,7 @@ When establishing connection we differentiate between the innviting side and the
 | confirmation| <code> # prints: Paired! </code> | <code> # prints: Paired! </code>|
 
 ### Transfering data -- TODO: FIX TRUNCATED PICKLE!
-After the connection has been established, there is no difference betweeen the funcionality for the inviting and the joining side. One side sends, and another side receives. Do not call for receive, unless something has been, or will be send. The funcionality for text works only for text with up to 4096 characters. The functionality for bytes works for whatever (also for text), but most importantly for numpy arrays.
+After the connection has been established, there is no difference betweeen the funcionality for the inviting and the joining side. One side sends, and another side receives. Do not call for receive, unless something has been, or will be send. The funcionality for text works only for text with up to 4096 characters. The functionality for bytes works for whatever (also for text), but most importantly for numpy arrays. There is a size limit to 10^64-1 bytes, can be incresed by increasing the size of the header.
 
 | | Sending side   | Receiving side  |
 ---|---|---
