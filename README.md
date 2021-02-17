@@ -13,7 +13,7 @@ When establishing connection we differentiate between the innviting side and the
 | | Inviting side   | Joining side  |
 ---|---|---
 | imports |  <code> import pair </code> | <code> import pair </code> |
-| inviting| <code> socket = pair.pair.invite(PORT) </code> |  |
+| inviting| <code> PORT = 8035 </code> <br/> <code> socket = pair.pair.invite(PORT) <br/> Out: Inviting to 8, 8035</code> |  |
 | joining|  | <code> socket = pair.pair.join(E, PORT) </code> |
 
 ### Transfering data -- TODO: FIX TRUNCATED PICKLE!
