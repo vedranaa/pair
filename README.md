@@ -1,6 +1,6 @@
-# pair
+# `pair`: pair your sock(et)s!
 
-Extension of the socket.socket class with functionality usefull for sending data between two computers on the same (wireless) network.
+Extension of the [`socket.socket`](https://docs.python.org/3/library/socket.html) class with functionality usefull for sending data between two computers on the same (wireless) network.
     
 It requires coordinantion between the sender and receiver, as receiving side (using the current implementation) will (once receiving has been called) block execution of whatever is running, and keep on waiting for the data. So you need to be sure that something is in the socket, or on the way.
 
@@ -12,17 +12,17 @@ When establishing connection we differentiate between the innviting side and the
 
 | | Inviting side   | Joining side  |
 ---|---|---
-| imports |  <code> import pair </code> <br/> <code> import numpy as np </code> | <code> import pair </code> <br/> <code> import numpy as np </code>   |
+| imports |  <code> import pair </code> | <code> import pair </code> |
 | inviting| <code> socket = pair.pair.invite(PORT) </code> |  |
 | joining|  | <code> socket = pair.pair.join(E, PORT) </code> |
 
-### Transfering data
+### Transfering data -- TODO: FIX TRUNCATED PICKLE!
 After the connection has been established, there is no difference betweeen the funcionality for the inviting and the joining side. One side sends, and another side receives. Do not call for receive, unless something has been, or will be send. The funcionality for text works only for text. The functionality for bytes works for whatever (also text), but most importantly for numpy arrays.
 
 | | Sending side   | Receiving side  |
 ---|---|---
 | text |  <code> socket.sendtext('Hello world! ') </code> | <code> txt = socket.recvtext() </code>   |
-| bytes | <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendb(A) </code> | <code> A = socket.recvb() <code> |
+| bytes | <code> import numpy as np </code> <br/> <code> A = np.arange(1000000).reshape((2500,400)) </code> <br/> <code> socket.sendb(A) </code> | <code> A = socket.recvb() <code> |
 
 ### Closing
 Remember to close your socket and free the port.
