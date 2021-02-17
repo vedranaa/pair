@@ -25,7 +25,7 @@ class pair(socket.socket):
        super(pair, self).__init__(*args, **kwargs)
     
     chunk = 4096 # chunk size in bytes
-    header = 16 # header size in bytes
+    header = 64 # header size in bytes
         
     @classmethod
     def invite(cls, PORT):
@@ -68,14 +68,13 @@ class pair(socket.socket):
          
     def sendb(self, nparray):
         k = pickle.dumps(nparray)
-        nr = len(k)//self.chunk + int((len(k)%self.chunk)>0)
-        self.sendtext(f'{nr:{str(self.header)}d}')
+        self.sendtext(f'{len(k):{str(self.header)}d}')
         self.sendall(k)
         
     def recvb(self):
-        nr = int(self.recv(self.header).decode())
+        lenk = int(self.recv(self.header).decode())
         k = b''
-        for i in range(nr):
+        while len(k)<lenk:
             k = k + self.recv(self.chunk)
         return pickle.loads(k)
             

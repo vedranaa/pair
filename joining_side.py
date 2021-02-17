@@ -10,7 +10,8 @@ Created on Mon Feb 15 16:12:24 2021
 #   If joining on the local network, use 0 for host extension, so join(0, PORT)
 #   If joining via network, use the host of the inviter, printed out when inviting.
 import pair
-socket = pair.pair.join(0, 8035) 
+socket = pair.pair.join(46, 8035) 
+#socket = pair.pair.join(0, 8035) 
 
 #%% STEP 3 (4): SEND TEXT
 #   Can also be done after step 4 indicated by (4). 
