@@ -4,7 +4,7 @@ Extension of the [`socket.socket`](https://docs.python.org/3/library/socket.html
     
 It requires coordinantion between the sender and receiver, as receiving side (using the current implementation) will (once receiving has been called) block execution of whatever is running, and keep on waiting for the data. So you need to be sure that something is in the socket, or on the way.
 
-The intended usage is when two operators are sitting close by, and can (verbaly) agree when something is to be send/received.
+The intended usage is when two operators are sitting close by, and can (verbaly) agree when something is to be send/received. It was tested only on three computers, so I don't guarantee it will work as-is for you.
 
 ## Use
 ### Establishing connection
@@ -17,7 +17,7 @@ When establishing connection we differentiate between the innviting side and the
 | joining|  | <code> socket = pair.pair.join(8, 8035) </code> <br/> <code> # use (0, 8035) for localhost! </code> |
 | confirmation| <code> # prints: Paired! </code> | <code> # prints: Paired! </code>|
 
-### Transfering data -- TODO: FIX TRUNCATED PICKLE!
+### Transfering data
 After the connection has been established, there is no difference betweeen the funcionality for the inviting and the joining side. One side sends, and another side receives. Do not call for receive, unless something has been, or will be send. The funcionality for text works only for text with up to 4096 characters. The functionality for bytes works for whatever (also for text), but most importantly for numpy arrays. In practice it only works for smaller arrays.
 
 | | Sending side   | Receiving side  |
